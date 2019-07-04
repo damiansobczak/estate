@@ -1,0 +1,13 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,36 @@
+@import "./assets/styles/base/reset";
+@import "./assets/styles/utils/variables";
+@import "./assets/styles/utils/mixins";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+p {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: poppins, sans-serif;
+  font-style: normal;
+}

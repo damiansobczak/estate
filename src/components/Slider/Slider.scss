@@ -1,0 +1,41 @@
+@import "../../assets/styles/utils/variables";
+@import "../../assets/styles/utils/mixins";
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  margin: 150px 0 60px 0;
+  @include breakpoint-down(md) {
+    margin-top: 100px;
+  }
+  &:before {
+    content: attr(data-title);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -90px;
+    margin: 0 auto;
+    font-size: 200px;
+    color: rgba(255, 255, 255, 0.2);
+    font-family: proxima-nova, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    @include breakpoint-down(lg) {
+      font-size: 80px;
+      top: -30px;
+    }
+  }
+
+  &__title {
+    color: #fff;
+    @include breakpoint-up(lg) {
+      width: 70%;
+    }
+    @include breakpoint-down(md) {
+      font-size: 2.5rem;
+    }
+  }
+}

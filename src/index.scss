@@ -1,6 +1,11 @@
 @import "./assets/styles/base/reset";
+@import "./assets/styles/base/bootstrap";
 @import "./assets/styles/utils/variables";
 @import "./assets/styles/utils/mixins";
+
+html {
+  font-size: 16px;
+}
 
 body {
   margin: 0;
@@ -17,6 +22,17 @@ code {
 a {
   text-decoration: none;
   outline: none;
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+button {
+  font-family: poppins, sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
 p {
@@ -33,4 +49,10 @@ h5,
 h6 {
   font-family: poppins, sans-serif;
   font-style: normal;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 1.2;
 }

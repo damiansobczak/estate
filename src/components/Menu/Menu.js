@@ -14,7 +14,7 @@ class Menu extends React.Component {
             </Link>
           </div>
           <ul className="menu__items">
-            <li className="menu__item">
+            <li className="menu__item menu__item--active">
               <Link to="/">Strona główna</Link>
             </li>
             <li className="menu__item">

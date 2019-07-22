@@ -1,0 +1,175 @@
+@import "../../assets/styles/utils/variables";
+@import "../../assets/styles/utils/mixins";
+
+.footer {
+  padding: 100px 0;
+  background-color: $color-neutral-900;
+
+  @include breakpoint-down(md) {
+    padding: 50px 0;
+    text-align: center;
+  }
+
+  &__title {
+    color: #fff;
+    font-size: $font-600;
+    font-family: poppins, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.2;
+    margin-bottom: 20px;
+
+    @include breakpoint-down(md) {
+      font-size: $font-500;
+    }
+  }
+
+  &__text {
+    color: #fff;
+    opacity: 0.5;
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @include breakpoint-down(md) {
+      justify-content: center;
+    }
+  }
+
+  &__button {
+    background-color: $color-accent;
+    color: #fff;
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-size: $font-200;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: darken($color-accent, 15%);
+    }
+  }
+
+  &__menu {
+    padding: 40px 0;
+    margin-top: 70px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    @include breakpoint-down(md) {
+      margin-top: 40px;
+      padding: 20px 0;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+
+    @include breakpoint-down(md) {
+      display: none;
+    }
+  }
+
+  &__link {
+    padding: 0 20px;
+    font-family: poppins, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: $font-200;
+    cursor: pointer;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:hover {
+      a {
+        opacity: 1;
+      }
+    }
+
+    a {
+      color: #fff;
+      opacity: 0.5;
+      transition: opacity 0.2s ease-in-out;
+
+      &:focus,
+      &:active {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @include breakpoint-down(md) {
+      justify-content: center;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:last-child {
+      margin-left: 20px;
+    }
+
+    &:hover {
+      background-color: #fff;
+
+      svg {
+        fill: $color-accent;
+      }
+    }
+
+    svg {
+      fill: #fff;
+      width: 18px;
+      height: 18px;
+      transition: fill 0.2s ease-in-out;
+    }
+  }
+
+  &__copyright {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+    line-height: 1.5;
+
+    @include breakpoint-down(md) {
+      margin-top: 40px;
+      flex-direction: column;
+    }
+
+    p {
+      color: #fff;
+      opacity: 0.5;
+    }
+
+    a {
+      color: rgba(255, 255, 255, 0.5);
+      transition: opacity 0.2s ease-in-out;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      span {
+        color: $color-accent;
+        font-weight: 700;
+      }
+    }
+  }
+}

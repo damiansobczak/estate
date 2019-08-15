@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Footer from "../components/Footer/Footer";
+import Faq from "../components/Faq/Faq";
+import FeatureOffer from "../components/FeatureOffer/FeatureOffer";
 
 class Home extends Component {
   constructor(props) {
@@ -7,7 +9,13 @@ class Home extends Component {
     this.state = {};
   }
   render() {
-    return <Footer />;
+    return (
+      <>
+        <FeatureOffer title="Oferty najmu nieruchomości" placeholder="Wynajem" count="06" />
+        <Faq />
+        <Footer />
+      </>
+    );
   }
 }
 

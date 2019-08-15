@@ -1,0 +1,47 @@
+@import "../../assets/styles/utils/variables";
+@import "../../assets/styles/utils/mixins";
+
+.featureOffer {
+  padding: 90px 0;
+  position: relative;
+
+  &:before {
+    content: attr(data-placeholder);
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    color: $color-neutral-200;
+    font-size: 180px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    color: $color-accent;
+    font-family: poppins, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  &__title {
+    color: $color-text-primary;
+  }
+
+  &__contact {
+    text-align: right;
+    color: $color-text-secondary;
+    text-transform: capitalize;
+    font-weight: 600;
+
+    @include breakpoint-down(md) {
+      text-align: left;
+    }
+  }
+
+  &__phone {
+    font-weight: 700;
+    color: $color-text-primary;
+  }
+}

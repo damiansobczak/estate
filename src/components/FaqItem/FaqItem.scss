@@ -1,0 +1,35 @@
+@import "../../assets/styles/utils/variables";
+@import "../../assets/styles/utils/mixins";
+
+.faqitem {
+    border-top: 1px solid $color-neutral-200;
+    display: flex;
+    padding: 40px 40px 0 0;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+
+    &__count {
+        color: $color-accent;
+        font-family: poppins, sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        margin-right: 40px;
+    }
+
+    &__title {
+        font-family: poppins, sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        color: $color-text-primary;
+        margin-bottom: 15px;
+        line-height: 1.2;
+    }
+
+    &__desc {
+        color: $color-text-secondary;
+        font-family: proxima-nova, sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        line-height: 1.5;
+    }
+}

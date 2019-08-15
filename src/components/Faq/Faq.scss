@@ -1,0 +1,21 @@
+@import "../../assets/styles/utils/variables";
+@import "../../assets/styles/utils/mixins";
+
+
+.faq {
+    padding: 90px 0;
+
+    &__items {
+        padding-top: 60px;
+        flex-wrap: wrap;
+    }
+
+    &__title {
+        color: $color-text-primary;
+        text-align: center;
+        text-transform: capitalize;
+        @include breakpoint-down(md){
+            font-size: $font-500;
+        }
+    }
+}

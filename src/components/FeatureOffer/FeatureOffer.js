@@ -8,6 +8,10 @@ class FeatureOffer extends React.Component {
     return (
       <section className="featureOffer" data-placeholder={this.props.placeholder}>
         <div className="container">
+          <div className="featureOffer__counter">
+            <div className="featureOffer__counter__digit">{this.props.count}</div>
+            <div className="featureOffer__counter__text">Aktualnie w ofercie</div>
+          </div>
           <div className="columns">
             <div className="column is-6-tablet">
               <div className="featureOffer__link">Zobacz więcej ofert</div>

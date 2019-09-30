@@ -4,9 +4,10 @@ import Faq from "../components/Faq/Faq";
 import FeatureOffer from "../components/FeatureOffer/FeatureOffer";
 import Jumbo from "../components/Jumbo/Jumbo";
 import FilterSearch from "../components/FilterSearch/FilterSearch";
+import Features from "../components/Features/Features";
 
-class Home extends Component {
-  constructor(props) {
+class Home extends Component<any, any> {
+  constructor(props: any) {
     super(props);
     this.state = {};
   }
@@ -18,6 +19,7 @@ class Home extends Component {
         <Jumbo />
         <FeatureOffer title="Oferty najmu nieruchomości" placeholder="Wynajem" count="06" />
         <Faq />
+        <Features />
         <Footer />
       </>
     );

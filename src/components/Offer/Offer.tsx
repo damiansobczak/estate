@@ -1,7 +1,8 @@
 import React from "react";
 import "./Offer.scss";
+import { OfferProps } from "./Interfaces/OfferProps";
 
-class Offer extends React.Component {
+class Offer extends React.Component<OfferProps, any> {
   render() {
     return (
       <div className="column is-6-tablet is-4-desktop">
@@ -18,7 +19,7 @@ class Offer extends React.Component {
             </div>
             <div className="offer__title">{this.props.title}</div>
             <div className="offer__sep" />
-            <div className="offer__tags">{this.props.tags.map(tag => `${tag}, `)}</div>
+            <div className="offer__tags">{this.props.tags.map((tag: string) => `${tag}, `)}</div>
           </div>
         </div>
       </div>

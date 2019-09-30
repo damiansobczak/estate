@@ -1,9 +1,10 @@
 import React from "react";
+import { FeatureOfferProps } from "./Interfaces/FeatureOfferProps";
 import "./FeatureOffer.scss";
 import Offer from "../Offer/Offer";
 import Image from "../../assets/feature-offer.png";
 
-class FeatureOffer extends React.Component {
+class FeatureOffer extends React.Component<FeatureOfferProps> {
   render() {
     return (
       <section className="featureOffer" data-placeholder={this.props.placeholder}>
@@ -24,9 +25,9 @@ class FeatureOffer extends React.Component {
             </div>
           </div>
           <div className="columns">
-            <Offer image={Image} price="235,000 zł" category="Wynajem" date="24 Czer, 2019" title="Ostrów Wielkopolski, Panorama ul. Jasna 32/7" tags={[["2 pokoje"], ["łazienka"], ["51m2"]]} />
-            <Offer image={Image} price="235,000 zł" category="Wynajem" date="24 Czer, 2019" title="Ostrów Wielkopolski, Panorama ul. Jasna 32/7" tags={[["2 pokoje"], ["łazienka"], ["51m2"]]} />
-            <Offer image={Image} price="235,000 zł" category="Wynajem" date="24 Czer, 2019" title="Ostrów Wielkopolski, Panorama ul. Jasna 32/7" tags={[["2 pokoje"], ["łazienka"], ["51m2"]]} />
+            <Offer image={Image} price="235,000 zł" category="Wynajem" date="24 Czer, 2019" title="Ostrów Wielkopolski, Panorama ul. Jasna 32/7" tags={["2 pokoje", "łazienka", "51m2"]} />
+            <Offer image={Image} price="235,000 zł" category="Wynajem" date="24 Czer, 2019" title="Ostrów Wielkopolski, Panorama ul. Jasna 32/7" tags={["2 pokoje", "łazienka", "51m2"]} />
+            <Offer image={Image} price="235,000 zł" category="Wynajem" date="24 Czer, 2019" title="Ostrów Wielkopolski, Panorama ul. Jasna 32/7" tags={["2 pokoje", "łazienka", "51m2"]} />
           </div>
         </div>
       </section>

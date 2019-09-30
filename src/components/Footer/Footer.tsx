@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./Footer.scss";
 
-class Footer extends Component {
+class Footer extends Component<any, any> {
   render() {
     return (
       <footer className="footer">

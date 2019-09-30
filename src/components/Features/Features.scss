@@ -1,0 +1,19 @@
+@import "../../assets/styles/utils/variables";
+@import "../../assets/styles/utils/mixins";
+
+.features {
+  margin: 40px 0;
+  border: 1px solid transparent;
+  &__desc {
+    flex-direction: column;
+  }
+  &__title {
+    color: $color-text-primary;
+  }
+  &__text {
+    color: $color-text-secondary;
+    line-height: 1.5;
+    font-weight: 500;
+    margin-bottom: 50px;
+  }
+}

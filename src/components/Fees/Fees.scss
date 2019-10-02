@@ -1,0 +1,31 @@
+@import "../../assets/styles/utils/variables";
+@import "../../assets/styles/utils/mixins";
+
+.fees {
+  padding: 50px 0;
+
+  &__subtitle {
+    color: $color-text-secondary;
+    margin-bottom: 15px;
+  }
+
+  &__numbers {
+    color: $color-accent;
+    font-weight: 500;
+    font-size: $font-500;
+    margin-top: 10px;
+  }
+
+  &__desc {
+    width: 85%;
+    margin-top: 20px;
+  }
+
+  &__hr {
+    display: block;
+    width: 40%;
+    height: 1px;
+    background-color: rgba($color-neutral-300, 0.4);
+    margin: 20px 0 0;
+  }
+}

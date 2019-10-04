@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Assets /> renders correctly 1`] = `
+<section
+  className="assets"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="columns is-multiline is-mobile"
+    >
+      <div
+        className="assets__item column is-6-mobile is-4-tablet is-2-desktop"
+      >
+        <div
+          className="assets__name"
+        >
+          Łazienka
+        </div>
+        <div
+          className="assets__desc"
+        >
+          Prysznic, pralka
+        </div>
+      </div>
+      <div
+        className="assets__item column is-6-mobile is-4-tablet is-2-desktop"
+      >
+        <div
+          className="assets__name"
+        >
+          Pokoje
+        </div>
+        <div
+          className="assets__desc"
+        >
+          2, TV, stół, sofa
+        </div>
+      </div>
+      <div
+        className="assets__item column is-6-mobile is-4-tablet is-2-desktop"
+      >
+        <div
+          className="assets__name"
+        >
+          Kuchnia
+        </div>
+        <div
+          className="assets__desc"
+        >
+          Kuchenka, czajnik
+        </div>
+      </div>
+      <div
+        className="assets__item column is-6-mobile is-4-tablet is-2-desktop"
+      >
+        <div
+          className="assets__name"
+        >
+          Taras
+        </div>
+        <div
+          className="assets__desc"
+        >
+          6m2, zastawa
+        </div>
+      </div>
+      <div
+        className="assets__item column is-6-mobile is-4-tablet is-2-desktop"
+      >
+        <div
+          className="assets__name"
+        >
+          Parking
+        </div>
+        <div
+          className="assets__desc"
+        >
+          Miejsce, szlaban
+        </div>
+      </div>
+      <div
+        className="assets__item column is-6-mobile is-4-tablet is-2-desktop"
+      >
+        <div
+          className="assets__name"
+        >
+          Metraż
+        </div>
+        <div
+          className="assets__desc"
+        >
+          26m2, taras
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;

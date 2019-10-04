@@ -1,0 +1,60 @@
+@import "../../assets/styles/utils/variables";
+@import "../../assets/styles/utils/mixins";
+
+.assets {
+  background-color: $color-neutral-100;
+  padding: 50px 0;
+
+  &--empty {
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    position: relative;
+    padding-right: 20px;
+    margin: 5px 0;
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: 20px;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      width: 1px;
+      background-color: rgba($color-neutral-300, 0.4);
+    }
+
+    &:last-child {
+      &:after {
+        background-color: transparent;
+      }
+    }
+
+    @include breakpoint-down(md) {
+      &:nth-child(even) {
+        &:after {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  &__name {
+    color: $color-text-secondary;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  &__desc {
+    color: $color-text-primary;
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Gallery /> renders correctly 1`] = `
+<section
+  className="gallery"
+>
+  <div
+    className="gallery__item"
+  >
+    <img
+      alt="To jest obrazek galeri"
+      src="galeria-1.png"
+    />
+  </div>
+  <div
+    className="gallery__item"
+  >
+    <img
+      alt="To jest obrazek galeri"
+      src="galeria-2.png"
+    />
+  </div>
+  <div
+    className="gallery__item"
+  >
+    <img
+      alt="To jest obrazek galeri"
+      src="galeria-3.png"
+    />
+  </div>
+  <div
+    className="gallery__item"
+  >
+    <img
+      alt="To jest obrazek galeri"
+      src="galeria-4.png"
+    />
+  </div>
+</section>
+`;

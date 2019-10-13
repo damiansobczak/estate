@@ -1,0 +1,54 @@
+@import "../../assets/styles/utils/variables";
+@import "../../assets/styles/utils/mixins";
+
+.gallery {
+  margin: 30px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 250px);
+  grid-gap: 5px;
+
+  @include breakpoint-down(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpoint-down(sm) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 200px;
+  }
+
+  &__item {
+    background-color: #f1f1f1;
+    overflow: hidden;
+    cursor: pointer;
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+
+    @include breakpoint-up(md) {
+      &:first-child {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+
+      &:last-child {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.4s ease-in-out;
+    }
+  }
+}

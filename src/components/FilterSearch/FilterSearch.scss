@@ -2,14 +2,16 @@
 @import "../../assets/styles/utils/mixins";
 
 .filterSearch {
-  display: flex;
-  background-color: #fff;
-  border-radius: 4px;
-  overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  font-family: poppins, sans-serif;
-  max-width: 1100px;
-  margin: 0 auto;
+  &__form {
+    display: flex;
+    background-color: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    font-family: poppins, sans-serif;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
 
   &__wrapper {
     display: flex;

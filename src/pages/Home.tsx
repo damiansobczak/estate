@@ -10,6 +10,9 @@ import Assets from "../components/Assets/Assets";
 import Gallery from "../components/Gallery/Gallery";
 import { galleryAPI } from "../helpers";
 import { assetsAPI } from "../helpers";
+import Slider from "../components/Slider/Slider";
+import SliderImage from "../assets/slider.jpg";
+import Header from "../components/Header/Header";
 
 class Home extends Component<any, any> {
   constructor(props: any) {
@@ -19,7 +22,10 @@ class Home extends Component<any, any> {
   render() {
     return (
       <>
-        <FilterSearch />
+        <Header>
+          <Slider title="Znajdź mieszkanie szyte na miarę" image={SliderImage} alt="To jest alt do slider 1" />
+          <FilterSearch />
+        </Header>
         <FeatureOffer title="Oferty sprzedaży nieruchomości" placeholder="Sprzedaż" count="10" />
         <Jumbo />
         <FeatureOffer title="Oferty najmu nieruchomości" placeholder="Wynajem" count="06" />

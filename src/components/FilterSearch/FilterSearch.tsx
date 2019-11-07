@@ -4,8 +4,8 @@ import "./FilterSearch.scss";
 class FilterSearch extends React.Component {
   render() {
     return (
-      <div className="container">
-        <form className="filterSearch">
+      <div className="filterSearch container">
+        <form className="filterSearch__form">
           <div className="filterSearch__wrapper">
             <div className="filterSearch__group">
               <label htmlFor="filterSearch__name" className="filterSearch__label">

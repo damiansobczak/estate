@@ -1,0 +1,19 @@
+@import "../../assets/styles/utils/variables";
+@import "../../assets/styles/utils/mixins";
+
+.header {
+  margin-bottom: 50px;
+  position: relative;
+
+  .filterSearch {
+    position: absolute;
+    bottom: 40%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    @include breakpoint-down(md) {
+      bottom: 30%;
+    }
+  }
+}

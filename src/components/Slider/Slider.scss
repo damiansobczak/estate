@@ -1,0 +1,41 @@
+@import "../../assets/styles/utils/variables";
+@import "../../assets/styles/utils/mixins";
+
+.slider {
+  height: 800px;
+
+  @include breakpoint-down(md) {
+    height: 500px;
+  }
+
+  &__item {
+    display: none;
+    height: 100%;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    font-size: $font-700;
+    max-width: 720px;
+
+    @include breakpoint-down(md) {
+      font-size: $font-600;
+    }
+  }
+
+  &__image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}

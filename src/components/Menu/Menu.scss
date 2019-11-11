@@ -1,0 +1,119 @@
+@import "../../assets/styles/utils/variables";
+@import "../../assets/styles/utils/mixins";
+
+@keyframes toggleMenu {
+  from {
+    opacity: 0;
+    top: 60px;
+  }
+  to {
+    opacity: 1;
+    top: 70px;
+  }
+}
+
+@keyframes toggleMenuOut {
+  from {
+    opacity: 1;
+    top: 70px;
+  }
+  to {
+    opacity: 0;
+    top: 60px;
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba($color-neutral-200, 0.4);
+  position: relative;
+
+  @include breakpoint-down(lg) {
+    padding: 20px 30px;
+  }
+
+  &__mobile {
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    background: none;
+    color: #fff;
+    font-size: 1.5rem;
+
+    @include breakpoint-up(md) {
+      display: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include breakpoint-down(md) {
+      display: none;
+      flex-direction: column;
+      min-width: 300px;
+      position: absolute;
+      opacity: 0;
+      top: 60px;
+      right: 40px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    &--active {
+      display: flex;
+    }
+
+    &--animate {
+      animation-name: toggleMenu;
+      animation-duration: 0.2s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: both;
+    }
+
+    &--animate-out {
+      animation-name: toggleMenuOut;
+      animation-duration: 0.2s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: both;
+    }
+  }
+
+  &__item {
+    margin: 0 15px;
+
+    @include breakpoint-down(md) {
+      width: 100%;
+      margin: 10px 15px;
+    }
+  }
+
+  &__link {
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+    font-weight: 500;
+    transition: opacity 0.1s ease-in-out;
+
+    &:hover {
+      opacity: 0.6;
+      color: #fff;
+    }
+
+    @include breakpoint-down(md) {
+      color: $color-text-primary;
+      align-items: flex-start;
+
+      &:hover {
+        color: $color-text-primary;
+      }
+    }
+  }
+}

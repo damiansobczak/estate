@@ -10,9 +10,12 @@ import Assets from "../components/Assets/Assets";
 import Gallery from "../components/Gallery/Gallery";
 import { galleryAPI } from "../helpers";
 import { assetsAPI } from "../helpers";
+import { menuAPI } from "../helpers";
 import Slider from "../components/Slider/Slider";
 import SliderImage from "../assets/slider.jpg";
 import Header from "../components/Header/Header";
+import Menu from "../components/Menu/Menu";
+import Logo from "../assets/logo.png";
 
 class Home extends Component<any, any> {
   constructor(props: any) {
@@ -23,6 +26,7 @@ class Home extends Component<any, any> {
     return (
       <>
         <Header>
+          <Menu pages={menuAPI} logo={Logo} />
           <Slider title="Znajdź mieszkanie szyte na miarę" image={SliderImage} alt="To jest alt do slider 1" />
           <FilterSearch />
         </Header>

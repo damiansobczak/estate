@@ -2,11 +2,12 @@
 @import "../../assets/styles/utils/mixins";
 
 .slider {
-  height: 800px;
-
-  @include breakpoint-down(md) {
-    height: 500px;
-  }
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 
   &__item {
     display: none;

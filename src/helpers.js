@@ -13,3 +13,5 @@ export const assetsAPI = [
   { id: 5, name: "Parking", desc: "Miejsce, szlaban" },
   { id: 6, name: "Metraż", desc: "26m2, taras" }
 ];
+
+export const menuAPI = [{ id: 1, name: "Strona główna", desc: "Biuro nieruchomości", url: "/" }, { id: 2, name: "Wynajem", desc: "Strona z ofertami wynajmu", url: "/wynajem" }, { id: 3, name: "Sprzedaż", desc: "Strona z ofertami sprzedaży", url: "/sprzedaz" }];

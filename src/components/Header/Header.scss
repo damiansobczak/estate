@@ -4,6 +4,12 @@
 .header {
   margin-bottom: 50px;
   position: relative;
+  height: 800px;
+  z-index: 1;
+
+  @include breakpoint-down(md) {
+    height: 500px;
+  }
 
   .filterSearch {
     position: absolute;

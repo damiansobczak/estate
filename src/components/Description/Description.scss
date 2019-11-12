@@ -1,0 +1,42 @@
+@import "../../assets/styles/utils/variables";
+@import "../../assets/styles/utils/mixins";
+
+.description {
+  &__subtitle {
+    color: $color-text-secondary;
+  }
+
+  &__title {
+    margin: 20px 0;
+  }
+
+  &__favorite {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+    padding: 12px 18px;
+    border-radius: 30px;
+    background-color: $color-neutral-200;
+    border: 0;
+    outline: 0;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.1s ease-in;
+
+    &:hover {
+      background-color: $color-accent;
+      color: #fff;
+    }
+
+    span {
+      margin-right: 6px;
+      font-size: 1rem;
+    }
+  }
+
+  &__text {
+    color: $color-text-secondary;
+    line-height: 1.5;
+    margin-top: 30px;
+  }
+}

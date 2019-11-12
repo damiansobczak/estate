@@ -4,6 +4,7 @@ import { MenuProps } from "./Interfaces/MenuProps";
 
 class Menu extends React.Component<MenuProps> {
   private listRef: React.RefObject<HTMLUListElement>;
+
   constructor(props: MenuProps) {
     super(props);
     this.listRef = React.createRef();
@@ -12,13 +13,15 @@ class Menu extends React.Component<MenuProps> {
 
   toggleMenu() {
     const ref = this.listRef.current;
-    if (ref && !ref.classList.contains("menu__list--animate")) {
-      ref.classList.add("menu__list--active", "menu__list--animate");
-    } else if (ref && ref.classList.contains("menu__list--animate")) {
-      ref.classList.add("menu__list--animate-out");
-      setTimeout(() => {
-        ref && ref.classList.remove("menu__list--animate", "menu__list--active", "menu__list--animate-out");
-      }, 200);
+    if (ref) {
+      if (!ref.classList.contains("menu__list--active")) {
+        ref.classList.add("menu__list--active", "menu__list--animate");
+      } else {
+        ref.classList.add("menu__list--animate-out");
+        setTimeout(() => {
+          ref.classList.remove("menu__list--animate", "menu__list--active", "menu__list--animate-out");
+        }, 200);
+      }
     }
   }
 

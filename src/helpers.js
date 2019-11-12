@@ -15,3 +15,13 @@ export const assetsAPI = [
 ];
 
 export const menuAPI = [{ id: 1, name: "Strona główna", desc: "Biuro nieruchomości", url: "/" }, { id: 2, name: "Wynajem", desc: "Strona z ofertami wynajmu", url: "/wynajem" }, { id: 3, name: "Sprzedaż", desc: "Strona z ofertami sprzedaży", url: "/sprzedaz" }];
+
+export const offerJumboAPI = {
+  subtitle: "Mieszkanie z garażem",
+  title: "Przestronne mieszkanie, atrakcyjna lokalizacja",
+  text: "Maecenas in turpis diam. Sed eget metus at urna mattis vehicula. Duis iaculis ligula a enim vestibulum lacinia. Sed eget metus at urna mattis vehicula. Duis iaculis ligula a enim. ",
+  center: {
+    x: 50.9,
+    y: 60.1
+  }
+};

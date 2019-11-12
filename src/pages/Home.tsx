@@ -11,11 +11,13 @@ import Gallery from "../components/Gallery/Gallery";
 import { galleryAPI } from "../helpers";
 import { assetsAPI } from "../helpers";
 import { menuAPI } from "../helpers";
+import { offerJumboAPI } from "../helpers";
 import Slider from "../components/Slider/Slider";
 import SliderImage from "../assets/slider.jpg";
 import Header from "../components/Header/Header";
 import Menu from "../components/Menu/Menu";
 import Logo from "../assets/logo.png";
+import OfferJumbo from "../components/OfferJumbo/OfferJumbo";
 
 class Home extends Component<any, any> {
   constructor(props: any) {
@@ -30,6 +32,7 @@ class Home extends Component<any, any> {
           <Slider title="Znajdź mieszkanie szyte na miarę" image={SliderImage} alt="To jest alt do slider 1" />
           <FilterSearch />
         </Header>
+        <OfferJumbo details={offerJumboAPI} />
         <FeatureOffer title="Oferty sprzedaży nieruchomości" placeholder="Sprzedaż" count="10" />
         <Jumbo />
         <FeatureOffer title="Oferty najmu nieruchomości" placeholder="Wynajem" count="06" />

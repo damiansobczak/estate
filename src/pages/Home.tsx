@@ -29,13 +29,25 @@ class Home extends Component<any, any> {
       <>
         <Header>
           <Menu pages={menuAPI} logo={Logo} />
-          <Slider title="Znajdź mieszkanie szyte na miarę" image={SliderImage} alt="To jest alt do slider 1" />
+          <Slider
+            title="Znajdź mieszkanie szyte na miarę"
+            image={SliderImage}
+            alt="To jest alt do slider 1"
+          />
           <FilterSearch />
         </Header>
         <OfferJumbo details={offerJumboAPI} />
-        <FeatureOffer title="Oferty sprzedaży nieruchomości" placeholder="Sprzedaż" count="10" />
+        <FeatureOffer
+          title="Oferty sprzedaży nieruchomości"
+          placeholder="Sprzedaż"
+          count="10"
+        />
         <Jumbo />
-        <FeatureOffer title="Oferty najmu nieruchomości" placeholder="Wynajem" count="06" />
+        <FeatureOffer
+          title="Oferty najmu nieruchomości"
+          placeholder="Wynajem"
+          count="06"
+        />
         <Faq />
         <Gallery images={galleryAPI} />
         <Fees media="230" rent="450" deposit="2000" price="345,600" />

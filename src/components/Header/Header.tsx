@@ -4,7 +4,11 @@ import { HeaderProps } from "./Interfaces/HeaderProps";
 
 class Header extends React.Component<HeaderProps> {
   render() {
-    return <section className="header">{this.props.children}</section>;
+    return (
+      <section className="header" style={{ height: `${this.props.height}` }}>
+        {this.props.children}
+      </section>
+    );
   }
 }
 

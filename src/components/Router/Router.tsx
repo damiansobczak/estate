@@ -4,6 +4,7 @@ import Home from "../../pages/Home";
 import Sprzedaz from "../../pages/Sprzedaz";
 import Wynajem from "../../pages/Wynajem";
 import NotFound from "../../pages/NotFound";
+import Oferta from "../../pages/Oferta";
 
 const Router = () => (
   <BrowserRouter>
@@ -11,6 +12,7 @@ const Router = () => (
       <Route exact path="/" component={Home} />
       <Route exact path="/wynajem" component={Wynajem} />
       <Route exact path="/sprzedaz" component={Sprzedaz} />
+      <Route exact path="/oferta" component={Oferta} />
       <Route component={NotFound} />
     </Switch>
   </BrowserRouter>

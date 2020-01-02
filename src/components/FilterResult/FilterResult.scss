@@ -1,0 +1,48 @@
+@import "../../assets/styles/utils/variables";
+@import "../../assets/styles/utils/mixins";
+
+.filterResult{
+    display: none;
+    flex-direction: column;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 60px;
+    background-color: #fff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+
+    &--visible {
+        display: flex;
+        animation-name: filterResultToggle;
+        animation-duration: 0.2s;
+        animation-direction: normal;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: both;
+    }
+
+    &__item {
+        display: flex;
+        width: 100%;
+        margin-bottom: 15px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@keyframes filterResultToggle {
+    from {
+        top: 60px;
+        opacity: 0;
+    }
+    to {
+        top: 70px;
+        opacity: 1;
+    }
+}

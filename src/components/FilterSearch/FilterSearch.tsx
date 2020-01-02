@@ -1,6 +1,7 @@
 import React, { FormEvent } from "react";
 import "./FilterSearch.scss";
 import { getSearches } from "../../API";
+import FilterResult from "../FilterResult/FilterResult";
 
 class FilterSearch extends React.Component {
   form = React.createRef<HTMLFormElement>();
@@ -11,6 +12,16 @@ class FilterSearch extends React.Component {
   search = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = await getSearches();
+    this.setState({
+      isShowing: !this.state.isShowing,
+      result: data
+    });
+    console.log(this.state.result);
+  }
+
+  state = {
+    isShowing: false,
+    result: null
   }
 
   render() {
@@ -39,6 +50,7 @@ class FilterSearch extends React.Component {
           </div>
           <button className="filterSearch__btn">Wyszukaj</button>
         </form>
+        <FilterResult isShowing={this.state.isShowing} data={this.state.result} />
       </div>
     );
   }

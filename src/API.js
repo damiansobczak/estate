@@ -31,7 +31,7 @@ export async function getSearches(text = "", price = 99999999999, category = "")
     const estateText = estates.filter(estate => estate.title.rendered.toUpperCase().includes(text.toUpperCase()));
 
     //Check price
-    const estatePrice = estateText.filter(estate => estate.acf.cena.replace(/zł|,/g, '') <= price);
+    const estatePrice = estateText.filter(estate => Number(estate.acf.cena.replace(/zł|,| /g, '')) <= price);
 
     //Check category
     const estateCategory = estatePrice.filter(estate => {

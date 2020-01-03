@@ -11,12 +11,14 @@ class FilterSearch extends React.Component {
 
   search = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const data = await getSearches();
+    const text = this.text.current ? this.text.current.value : "";
+    const price = this.price.current && Number(this.price.current.value) != 0 ? Number(this.price.current.value.replace(/zł|,| /g, '')) : 999999999;
+    const category = this.category.current ? this.category.current.value : "";
+    const data = await getSearches(text, price, category);
     this.setState({
       isShowing: !this.state.isShowing,
       result: data
     });
-    console.log(this.state.result);
   }
 
   state = {

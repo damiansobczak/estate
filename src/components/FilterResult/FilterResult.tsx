@@ -9,14 +9,15 @@ class FilterResult extends React.Component<FilterResultProps> {
                 <div className={`filterResult ${this.props.isShowing ? "filterResult--visible" : " "}`}>
                     {this.props.data.map((item: any) => (
                         <div className="filterResult__item" key={item.id}>
-                            {item.id}
-                            {item.slug}
-                            {item.title.rendered}
-                            {item.type}
-                            {item.cena}
-                            {item.ulica}
-                            {item.metraz}
-                            {/* <img src={item.better_featured_image != null ? item.better_featured_image.source_url : ''} alt="" /> */}
+                            <img className="filterResult__image" src={item.better_featured_image != null ? item.better_featured_image.source_url : ''} alt={item.slug} />
+                            <div className="filterResult__wrapper">
+                                <div className="filterResult__title">{item.title.rendered}</div>
+                                <div className="filterResult__desc">
+                                    <div className="filterResult__price">{item.acf.cena}</div>
+                                    <div className="filterResult__address">ul. {item.acf.ulica},</div>
+                                    <div className="filterResult__space">{item.acf.metraz}</div>
+                                </div>
+                            </div>
                         </div>
                     ))}
                 </div>
@@ -24,7 +25,7 @@ class FilterResult extends React.Component<FilterResultProps> {
         } else {
             return (
                 <div className={`filterResult ${this.props.isShowing ? "filterResult--visible" : " "}`}>
-                    Pusto
+                    Brak wyszukań
                 </div>
             );
         }

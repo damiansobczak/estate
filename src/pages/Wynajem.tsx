@@ -7,8 +7,20 @@ import Slider from "../components/Slider/Slider";
 import SliderImage from "../assets/slider-2.png";
 import Footer from "../components/Footer/Footer";
 import FeatureOffer from "../components/FeatureOffer/FeatureOffer";
+import { getPromoRent } from "../API";
 
-class Sprzedaz extends React.Component {
+class Sprzedaz extends React.Component<any, any> {
+  constructor(props: any) {
+    super(props);
+    this.state = {
+      rent: null
+    };
+  }
+
+  componentDidMount(){
+    const rent = getPromoRent().then(res => this.setState({rent: res}));
+  }
+  
   render() {
     return (
       <>
@@ -25,6 +37,8 @@ class Sprzedaz extends React.Component {
           placeholder="Wynajem"
           count="10"
           category="Wynajem"
+          show={3}
+          data={this.state.rent}
         />
         <Footer />
       </>

@@ -24,16 +24,14 @@ export const getFaqs = (id) => {
     return axios.get(`${process.env.REACT_APP_API_URL}/faq`).then(res => res.data);
 }
 
+//Searches
 export async function getSearches(text = "", price = 99999999999, category = "") {
     const estates = await getEstates();
 
-    //Check text
     const estateText = estates.filter(estate => estate.title.rendered.toUpperCase().includes(text.toUpperCase()));
 
-    //Check price
     const estatePrice = estateText.filter(estate => Number(estate.acf.cena.replace(/zł|,| /g, '')) <= price);
 
-    //Check category
     const estateCategory = estatePrice.filter(estate => {
         return (category.toUpperCase() === "WYNAJEM") ? (estate.categories[0] === 2) : ((category.toUpperCase() === "SPRZEDAŻ") ? (estate.categories[0] === 3) : (estate));
     });
@@ -41,3 +39,14 @@ export async function getSearches(text = "", price = 99999999999, category = "")
     return estateCategory;
 }
 
+//Promoted estates in Rent
+export async function getPromoRent() {
+    const estates = await getEstates();
+    return estates.filter(estate => estate.acf.promocja & estate.categories[0] === 2);
+}
+
+//Promoted estates in Sale
+export async function getSaleRent() {
+    const estates = await getEstates();
+    return estates.filter(estate => estate.acf.promocja & estate.categories[0] === 3);
+}

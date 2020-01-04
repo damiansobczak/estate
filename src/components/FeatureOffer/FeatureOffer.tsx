@@ -25,9 +25,7 @@ class FeatureOffer extends React.Component<FeatureOfferProps> {
             </div>
           </div>
           <div className="columns">
-            <Offer image={Image} price="235,000 zł" category="Wynajem" date="24 Czer, 2019" title="Ostrów Wielkopolski, Panorama ul. Jasna 32/7" tags={["2 pokoje", "łazienka", "51m2"]} />
-            <Offer image={Image} price="235,000 zł" category="Wynajem" date="24 Czer, 2019" title="Ostrów Wielkopolski, Panorama ul. Jasna 32/7" tags={["2 pokoje", "łazienka", "51m2"]} />
-            <Offer image={Image} price="235,000 zł" category="Wynajem" date="24 Czer, 2019" title="Ostrów Wielkopolski, Panorama ul. Jasna 32/7" tags={["2 pokoje", "łazienka", "51m2"]} />
+            {this.props.data && this.props.data.slice(0, this.props.show).map((item: any) => <Offer image={Image} price={item.acf.cena} category={this.props.category} date="24 Czer, 2019" title={`${item.title.rendered}, ${item.acf.ulica}`} tags={[`Liczba pokoi ${item.acf.liczba_pokoi}`, `${item.acf.metraz}`, `Liczba pięter ${item.acf.liczba_pieter}`]} key={item.id}/>)}
           </div>
         </div>
       </section>

@@ -3,4 +3,6 @@ export interface FeatureOfferProps {
   count: string;
   title: string;
   category: string;
+  show: number;
+  data: object[] | null;
 }

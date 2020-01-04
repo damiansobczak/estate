@@ -10,11 +10,20 @@ import Footer from "../components/Footer/Footer";
 import Faq from "../components/Faq/Faq";
 import FeatureOffer from "../components/FeatureOffer/FeatureOffer";
 import Jumbo from "../components/Jumbo/Jumbo";
+import { getPromoRent, getSaleRent } from "../API";
 
 class Home extends Component<any, any> {
   constructor(props: any) {
     super(props);
-    this.state = {};
+    this.state = {
+      rent: null,
+      sale: null
+    };
+  }
+
+  componentDidMount(){
+    const rent = getPromoRent().then(res => this.setState({rent: res}));
+    const sale = getSaleRent().then(res => this.setState({sale: res}));
   }
   render() {
     return (
@@ -33,6 +42,8 @@ class Home extends Component<any, any> {
           placeholder="Sprzedaż"
           count="10"
           category="Sprzedaż"
+          show={3}
+          data={this.state.sale}
         />
         <Jumbo />
         <FeatureOffer
@@ -40,6 +51,8 @@ class Home extends Component<any, any> {
           placeholder="Wynajem"
           count="06"
           category="Wynajem"
+          show={3}
+          data={this.state.rent}
         />
         <Faq />
         <Footer />

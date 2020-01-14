@@ -10,21 +10,24 @@ import Footer from "../components/Footer/Footer";
 import Faq from "../components/Faq/Faq";
 import FeatureOffer from "../components/FeatureOffer/FeatureOffer";
 import Jumbo from "../components/Jumbo/Jumbo";
-import { getPromoRent, getSaleRent } from "../API";
+import { getPromoRent, getPromoSale, getFaqs } from "../API";
 
 class Home extends Component<any, any> {
   constructor(props: any) {
     super(props);
     this.state = {
       rent: null,
-      sale: null
+      sale: null,
+      faqs: null
     };
   }
 
-  componentDidMount(){
-    const rent = getPromoRent().then(res => this.setState({rent: res}));
-    const sale = getSaleRent().then(res => this.setState({sale: res}));
+  async componentDidMount() {
+    const rent = getPromoRent().then(res => this.setState({ rent: res }));
+    const sale = getPromoSale().then(res => this.setState({ sale: res }));
+    const faq = getFaqs().then(res => this.setState({ faqs: res.data }));
   }
+
   render() {
     return (
       <>
@@ -54,7 +57,7 @@ class Home extends Component<any, any> {
           show={3}
           data={this.state.rent}
         />
-        <Faq />
+        <Faq data={this.state.faqs}/>
         <Footer />
       </>
     );

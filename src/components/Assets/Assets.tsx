@@ -4,15 +4,18 @@ import { AssetsProps } from "./Interfaces/AssetsProps";
 
 class Assets extends React.Component<AssetsProps> {
   render() {
-    if (this.props.assets && this.props.assets.length > 0) {
+    if (this.props.assets) {
+      const assets = Object.entries(this.props.assets).map(asset => {
+        return { [asset[0]]: asset[1] };
+      });
       return (
         <section className="assets">
           <div className="container">
             <div className="columns is-multiline is-mobile">
-              {this.props.assets.map(asset => (
-                <div className="assets__item column is-6-mobile is-4-tablet is-2-desktop" key={asset.id}>
-                  <div className="assets__name">{asset.name.trim() ? asset.name : "-"}</div>
-                  <div className="assets__desc">{asset.desc.trim() ? asset.desc : "-"}</div>
+              {assets.map((asset, index) => (
+                <div className="assets__item column is-6-mobile is-4-tablet is-2-desktop" key={index}>
+                  <div className="assets__name">{asset ? String(Object.keys(asset)).charAt(0).toUpperCase() + String(Object.keys(asset)).slice(1) : "-"}</div>
+                  <div className="assets__desc">{asset ? Object.values(asset) : "-"}</div>
                 </div>
               ))}
             </div>

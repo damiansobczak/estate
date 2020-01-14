@@ -16,10 +16,7 @@ class Map extends React.Component<MapProps> {
             bootstrapURLKeys={{
               key: "AIzaSyD3f_oy3CtnBeEM6wGBeBGhW7Frpd9pgzw"
             }}
-            defaultCenter={{
-              lat: this.props.cords.x,
-              lng: this.props.cords.y
-            }}
+            center={{ lat: Number(this.props.cords.x), lng: Number(this.props.cords.y) }}
             defaultZoom={11}
           >
             <MapMarker lat={this.props.cords.x} lng={this.props.cords.y} />

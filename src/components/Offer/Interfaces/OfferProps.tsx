@@ -1,4 +1,5 @@
 export interface OfferProps {
+  id: number;
   image: string;
   price: string;
   category: string;

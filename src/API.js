@@ -20,8 +20,8 @@ export const getPostsInCategory = async (name) => {
 }
 
 //All FAQs
-export const getFaqs = (id) => {
-    return axios.get(`${process.env.REACT_APP_API_URL}/faq`).then(res => res.data);
+export async function getFaqs() {
+    return axios.get(`${process.env.REACT_APP_API_URL}/faq`).then(res => res);
 }
 
 //Searches
@@ -46,7 +46,7 @@ export async function getPromoRent() {
 }
 
 //Promoted estates in Sale
-export async function getSaleRent() {
+export async function getPromoSale() {
     const estates = await getEstates();
     return estates.filter(estate => estate.acf.promocja & estate.categories[0] === 3);
 }

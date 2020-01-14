@@ -7,18 +7,18 @@ import Slider from "../components/Slider/Slider";
 import SliderImage from "../assets/slider-2.png";
 import Footer from "../components/Footer/Footer";
 import FeatureOffer from "../components/FeatureOffer/FeatureOffer";
-import { getPromoRent } from "../API";
+import { getPromoSale } from "../API";
 
 class Sprzedaz extends React.Component<any, any> {
   constructor(props: any) {
     super(props);
     this.state = {
-      rent: null
+      sale: null
     };
   }
 
-  componentDidMount(){
-    const rent = getPromoRent().then(res => this.setState({rent: res}));
+  componentDidMount() {
+    const sale = getPromoSale().then(res => this.setState({ sale: res }));
   }
 
   render() {
@@ -38,7 +38,7 @@ class Sprzedaz extends React.Component<any, any> {
           count="10"
           category="Sprzedaż"
           show={3}
-          data={this.state.rent}
+          data={this.state.sale}
         />
         <Footer />
       </>

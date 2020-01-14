@@ -1,18 +1,16 @@
 import React from "react";
 import FaqItem from "../FaqItem/FaqItem";
+import { FaqProps } from "./Interfaces/FaqProps";
 import "./Faq.scss";
 
-class Faq extends React.Component {
+class Faq extends React.Component<FaqProps> {
   render() {
     return (
       <section className="faq">
         <div className="container">
           <h3 className="faq__title">Często zadawane pytania</h3>
           <div className="faq__items columns">
-            <FaqItem count="01" title="Jakich dokumentów potrzebuję?" desc="Maecenas in turpis diam. Sed eget metus at urna mattis vehicula. Duis iaculis ligula a enim vestibulum lacinia." />
-            <FaqItem count="02" title="Jakich dokumentów potrzebuję?" desc="Maecenas in turpis diam. Sed eget metus at urna mattis vehicula. Duis iaculis ligula a enim vestibulum lacinia." />
-            <FaqItem count="03" title="Jakich dokumentów potrzebuję?" desc="Maecenas in turpis diam. Sed eget metus at urna mattis vehicula. Duis iaculis ligula a enim vestibulum lacinia." />
-            <FaqItem count="04" title="Jakich dokumentów potrzebuję?" desc="Maecenas in turpis diam. Sed eget metus at urna mattis vehicula. Duis iaculis ligula a enim vestibulum lacinia." />
+            {this.props.data && this.props.data.map((item: any, index: any) => <FaqItem count={index} title={item.title.rendered} desc={item.content.rendered.replace(/<p>|<\/p>/g, '')} key={index}/>)}
           </div>
         </div>
       </section>

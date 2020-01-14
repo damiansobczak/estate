@@ -1,11 +1,12 @@
 import React from "react";
 import "./Offer.scss";
 import { OfferProps } from "./Interfaces/OfferProps";
+import { Link } from "react-router-dom";
 
 class Offer extends React.Component<OfferProps, any> {
   render() {
     return (
-      <div className="column is-6-tablet is-4-desktop">
+      <Link to={`/oferta/${this.props.id}`} className="column is-6-tablet is-4-desktop">
         <div className="offer">
           <div className="offer__media">
             <img src={this.props.image} alt="" />
@@ -22,7 +23,7 @@ class Offer extends React.Component<OfferProps, any> {
             <div className="offer__tags">{this.props.tags.map((tag: string) => `${tag}, `)}</div>
           </div>
         </div>
-      </div>
+      </Link>
     );
   }
 }

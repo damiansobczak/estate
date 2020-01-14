@@ -11,7 +11,7 @@ class Description extends React.Component<DescriptionProps> {
         <button className="description__favorite">
           <span className="icon-heart"></span> Dodaj do ulubionych
         </button>
-        <div className="description__text">{this.props.text}</div>
+        <div className="description__text">{this.props.text.replace(/<br\>|<p>|<\/p>|/g, '')}</div>
       </div>
     );
   }

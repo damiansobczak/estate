@@ -1,6 +1,7 @@
 import React from "react";
 import "./FilterResult.scss";
 import { FilterResultProps } from "./Interfaces/FilterResultProps";
+import { Link } from "react-router-dom";
 
 class FilterResult extends React.Component<FilterResultProps> {
     componentDidUpdate() {
@@ -12,7 +13,7 @@ class FilterResult extends React.Component<FilterResultProps> {
             return (
                 <div className={`filterResult ${this.props.isShowing ? "filterResult--visible" : " "}`}>
                     {this.props.data.map((item: any) => (
-                        <div className="filterResult__item" key={item.id}>
+                        <Link to={`/oferta/${item.id}`} className="filterResult__item" key={item.id}>
                             <img className="filterResult__image" src={item.better_featured_image != null ? item.better_featured_image.source_url : ''} alt={item.slug} />
                             <div className="filterResult__col">
                                 <div className="filterResult__title">{item.title.rendered}</div>
@@ -30,7 +31,7 @@ class FilterResult extends React.Component<FilterResultProps> {
                                 <div className="filterResult__title">Liczba pokoi</div>
                                 <div className="filterResult__value">{item.acf.liczba_pokoi}</div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             );

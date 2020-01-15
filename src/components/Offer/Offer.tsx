@@ -1,16 +1,25 @@
-import React from "react";
+import React, { MouseEvent } from "react";
 import "./Offer.scss";
 import { OfferProps } from "./Interfaces/OfferProps";
 import { Link } from "react-router-dom";
+import OfferImage from "../../assets/nieruchomosc.jpg";
 
 class Offer extends React.Component<OfferProps, any> {
+  addToFavorite = (event: MouseEvent, id: any) => {
+    event.preventDefault();
+    if (!localStorage.getItem(id)) {
+      localStorage.setItem(id, JSON.stringify(id));
+    }
+  }
   render() {
     return (
       <Link to={`/oferta/${this.props.id}`} className="column is-6-tablet is-4-desktop">
+        <div className="offer__favorite" onClick={(event) => this.addToFavorite(event, this.props.id)}>
+          <span className="icon-heart"></span>
+        </div>
         <div className="offer">
           <div className="offer__media">
-            <img src={this.props.image} alt="" />
-            <div className="offer__favorite" />
+            <img src={this.props.image ? this.props.image : OfferImage} alt="" />
             <div className="offer__price">{this.props.price}</div>
           </div>
           <div className="offer__content">

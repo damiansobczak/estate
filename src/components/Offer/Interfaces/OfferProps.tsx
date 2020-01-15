@@ -1,6 +1,6 @@
 export interface OfferProps {
   id: number;
-  image: string;
+  image: string | null;
   price: string;
   category: string;
   date: string;

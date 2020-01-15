@@ -25,7 +25,7 @@ class FeatureOffer extends React.Component<FeatureOfferProps> {
             </div>
           </div>
           <div className="columns">
-            {this.props.data && this.props.data.slice(0, this.props.show).map((item: any) => <Offer id={item.id} image={Image} price={item.acf.cena} category={this.props.category} date="24 Czer, 2019" title={`${item.title.rendered}, ${item.acf.ulica}`} tags={[`Liczba pokoi ${item.acf.liczba_pokoi}`, `${item.acf.metraz}`, `Liczba pięter ${item.acf.liczba_pieter}`]} key={item.id}/>)}
+            {this.props.data && this.props.data.slice(0, this.props.show).map((item: any) => <Offer id={item.id} image={item.better_featured_image ? item.better_featured_image.source_url : null} price={item.acf.cena} category={this.props.category} date="24 Czer, 2019" title={`${item.title.rendered}, ${item.acf.ulica}`} tags={[`Liczba pokoi ${item.acf.liczba_pokoi}`, `${item.acf.metraz}`, `Liczba pięter ${item.acf.liczba_pieter}`]} key={item.id} />)}
           </div>
         </div>
       </section>

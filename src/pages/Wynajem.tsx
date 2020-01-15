@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Header from "../components/Header/Header";
 import { menuAPI } from "../helpers";
 import Menu from "../components/Menu/Menu";
-import Logo from "../assets/logo.png";
+import Logo from "../assets/logo.svg";
 import Slider from "../components/Slider/Slider";
 import SliderImage from "../assets/slider-2.png";
 import Footer from "../components/Footer/Footer";

@@ -1,9 +1,11 @@
-import React from "react";
+import React, { MouseEvent } from "react";
 import "./Menu.scss";
 import { MenuProps } from "./Interfaces/MenuProps";
+import { ThemeContext } from "../ThemeContext";
 
 class Menu extends React.Component<MenuProps> {
   private listRef: React.RefObject<HTMLUListElement>;
+  static contextType = ThemeContext;
 
   constructor(props: MenuProps) {
     super(props);
@@ -26,22 +28,32 @@ class Menu extends React.Component<MenuProps> {
   }
 
   render() {
+    let value = this.context;
     return (
-      <nav aria-label="Primary" className="menu container">
-        <img src={this.props.logo} alt="Main logo" className="menu__logo" />
-        <button className="menu__mobile" onClick={this.toggleMenu}>
-          <span className="icon-menu"></span>
-        </button>
-        <ul className="menu__list" ref={this.listRef}>
-          {this.props.pages.map(page => (
-            <li className="menu__item" key={page.id}>
-              <a className="menu__link" href={page.url} title={page.desc}>
-                {page.name}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      <ThemeContext.Consumer>
+        {value => (
+          <nav aria-label="Primary" className="menu container">
+            <img src={this.props.logo} alt="Main logo" className="menu__logo" />
+            <button className="menu__mobile" onClick={this.toggleMenu}>
+              <span className="icon-menu"></span>
+            </button>
+            <ul className="menu__list" ref={this.listRef}>
+              {this.props.pages.map(page => (
+                <li className="menu__item" key={page.id}>
+                  <a className="menu__link" href={page.url} title={page.desc}>
+                    {page.name}
+                  </a>
+                </li>
+              ))}
+              <li className="menu__item">
+                <a className="menu__link" onClick={(e) => value.toggle(e)}>
+                  <span className="icon-heart"></span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        )}
+      </ThemeContext.Consumer>
     );
   }
 }

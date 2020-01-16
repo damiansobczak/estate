@@ -12,6 +12,7 @@ class OfferJumbo extends React.Component<OfferJumboProps> {
           <div className="columns">
             <div className="column is-6-tablet">
               <Description
+                id={this.props.details.id}
                 subtitle={this.props.details.subtitle}
                 title={this.props.details.title}
                 text={this.props.details.text}

@@ -53,6 +53,7 @@ class Oferta extends React.Component<any, any> {
 
     render() {
         const offerJumbo = {
+            id: this.props.match.params.id,
             title: this.state.title,
             subtitle: this.state.subtitle,
             text: this.state.text,

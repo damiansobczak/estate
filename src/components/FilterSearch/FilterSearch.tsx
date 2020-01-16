@@ -41,7 +41,7 @@ class FilterSearch extends React.Component {
               <label htmlFor="filterSearch__price" className="filterSearch__label">
                 Cena
               </label>
-              <input type="text" id="filterSearch__price" className="filterSearch__input" placeholder="np. 1500 - 2000" ref={this.price} />
+              <input type="text" id="filterSearch__price" className="filterSearch__input" placeholder="np. 200,000zł" ref={this.price} />
             </div>
             <div className="filterSearch__group filterSearch__group--category">
               <label htmlFor="filterSearch__category" className="filterSearch__label">

@@ -4,10 +4,6 @@ import { FilterResultProps } from "./Interfaces/FilterResultProps";
 import { Link } from "react-router-dom";
 
 class FilterResult extends React.Component<FilterResultProps> {
-    componentDidUpdate() {
-        console.log(this.props.data);
-
-    }
     render() {
         if (this.props.data && this.props.data.length) {
             return (

@@ -16,6 +16,7 @@ class Offer extends React.Component<OfferProps, any> {
     return (
       <Link to={`/oferta/${this.props.id}`} className="column is-6-tablet is-4-desktop">
         <div className="offer__favorite" onClick={(event) => this.addToFavorite(event, {
+          id: this.props.id,
           title: this.props.title,
           image: this.props.image || OfferImage,
           price: this.props.price,

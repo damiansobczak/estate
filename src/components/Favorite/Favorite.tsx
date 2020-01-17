@@ -20,15 +20,13 @@ class Favorite extends React.Component<any, any> {
     }
 
     componentDidUpdate() {
-        if (this.context.isOpen) {
-            if (this.state.items.length !== localStorage.length) {
-                let values = [], keys = Object.keys(localStorage), i = keys.length;
-                while (i--) {
-                    values.push(localStorage.getItem(keys[i]));
-                }
-                const items = values.map(item => JSON.parse(String(item)));
-                this.setState({ items });
+        if (this.context.isOpen && this.state.items.length !== localStorage.length) {
+            let values = [], keys = Object.keys(localStorage), i = keys.length;
+            while (i--) {
+                values.push(localStorage.getItem(keys[i]));
             }
+            const items = values.map(item => JSON.parse(String(item)));
+            this.setState({ items });
         }
     }
 
@@ -47,6 +45,9 @@ class Favorite extends React.Component<any, any> {
                                 <button className="favorite__button">
                                     <span className="icon-trash-2"></span>Usuń zapisane
                                 </button>
+                            </div>
+                            <div className="favorite__items columns">
+                                {this.state.items.map((item: any) => <Offer id={item.id} image={item.image} price={item.price} category={item.category} date={item.date} title={item.title} tags={item.tags} />)}
                             </div>
                         </div>
                     </div>

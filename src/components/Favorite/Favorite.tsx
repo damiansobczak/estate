@@ -10,6 +10,13 @@ class Favorite extends React.Component<any, any> {
         items: []
     }
 
+    deleteFavorites = (event: MouseEvent) => {
+        event.preventDefault();
+        localStorage.clear();
+        this.setState({ items: [] });
+        this.forceUpdate();
+    }
+
     componentDidMount() {
         let values = [], keys = Object.keys(localStorage), i = keys.length;
         while (i--) {
@@ -42,7 +49,7 @@ class Favorite extends React.Component<any, any> {
                             </button>
                             <div className="favorite__header">
                                 <h4 className="favorite__title">Ulubione</h4>
-                                <button className="favorite__button">
+                                <button className="favorite__button" onClick={(event) => this.deleteFavorites(event)}>
                                     <span className="icon-trash-2"></span>Usuń zapisane
                                 </button>
                             </div>

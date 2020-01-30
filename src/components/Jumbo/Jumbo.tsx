@@ -1,7 +1,7 @@
 import React from "react";
 import "./Jumbo.scss";
 import CoupleImage from "../../assets/smile-people.png";
-import HouseImage from "../../assets/modern-house-ideas.png";
+import HouseImage from "../../assets/jumbo-image.jpg";
 
 class Jumbo extends React.Component {
   render() {

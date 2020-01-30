@@ -1,7 +1,7 @@
-import Gallery1 from "./assets/galeria-1.png";
-import Gallery2 from "./assets/galeria-2.png";
-import Gallery3 from "./assets/galeria-3.png";
-import Gallery4 from "./assets/galeria-4.png";
+import Gallery1 from "./assets/image-1.jpg";
+import Gallery2 from "./assets/image-2.jpg";
+import Gallery3 from "./assets/image-3.jpg";
+import Gallery4 from "./assets/image-4.jpg";
 
 export const galleryAPI = [
   { id: 1, src: Gallery1, alt: "To jest obrazek galeri" },

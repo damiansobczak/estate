@@ -4,7 +4,7 @@ import { menuAPI } from "../helpers";
 import Menu from "../components/Menu/Menu";
 import Logo from "../assets/logo.svg";
 import Slider from "../components/Slider/Slider";
-import SliderImage from "../assets/slider-2.png";
+import SliderImage from "../assets/slider-2.jpg";
 import Footer from "../components/Footer/Footer";
 import Assets from "../components/Assets/Assets";
 import OfferJumbo from "../components/OfferJumbo/OfferJumbo";

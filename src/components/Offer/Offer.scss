@@ -66,6 +66,12 @@
         transform: translateX(0);
       }
     }
+
+    &--active {
+      span {
+        color: rgba(#F04133, 0.8);
+      }
+    }
   }
 
   &__price {

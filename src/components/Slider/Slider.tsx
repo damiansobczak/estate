@@ -1,7 +1,7 @@
 import React from "react";
 import "./Slider.scss";
 import { SliderProps } from "./Interfaces/SliderProps";
-import SliderImage from "../../assets/slider-2.png";
+import SliderImage from "../../assets/slider-2.jpg";
 
 class Slider extends React.Component<SliderProps> {
   render() {

@@ -46,7 +46,7 @@ class Menu extends React.Component<MenuProps> {
                 </li>
               ))}
               <li className="menu__item">
-                <a className="menu__link" onClick={(e) => value.toggle(e)}>
+                <a className="menu__link" onClick={(e: MouseEvent) => { value.toggle && value.toggle(e) }}>
                   <span className="icon-heart"></span>
                 </a>
               </li>

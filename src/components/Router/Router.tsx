@@ -10,16 +10,57 @@ import { ThemeContext } from "../ThemeContext";
 
 class Router extends React.Component<any, any> {
   state = {
-    isOpen: false
+    isOpen: false,
+    favorites: []
+  }
+
+  componentDidMount() {
+    let values = [], keys = Object.keys(localStorage), i = keys.length;
+    while (i--) {
+      values.push(localStorage.getItem(keys[i]));
+    }
+    const items = values.map(item => JSON.parse(String(item)));
+    this.setState({ favorites: items });
+    setTimeout(() => {
+      console.log(this.state.favorites);
+    }, 1000);
   }
 
   render() {
     return (
       <ThemeContext.Provider value={{
         isOpen: this.state.isOpen,
-        toggle: (e: MouseEvent) => {
+        toggle: (e) => {
           e.preventDefault();
           this.setState({ isOpen: !this.state.isOpen })
+        },
+        toggleFavorites: (event, details) => {
+          event.preventDefault();
+          const { id } = details;
+          let favorites: any = this.state.favorites;
+
+          if (!localStorage.getItem(id)) {
+            localStorage.setItem(id, JSON.stringify(details));
+            favorites.push(details);
+            this.setState({ favorites });
+          } else {
+            localStorage.removeItem(id);
+            let newFavorites = favorites.filter((item: any) => item.id !== id);
+            this.setState({ favorites: newFavorites });
+          }
+        },
+        favorites: this.state.favorites,
+        isFavorite: (id) => {
+          const items = this.state.favorites.filter((item: any) => item.id == id ? true : false);
+          return items.length ? true : false;
+        },
+        deleteFavorites: (e) => {
+          e.preventDefault();
+          localStorage.clear();
+          this.setState({
+            favorites: [],
+            isOpen: false
+          });
         }
       }}>
         <BrowserRouter>

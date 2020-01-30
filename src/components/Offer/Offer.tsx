@@ -3,32 +3,11 @@ import "./Offer.scss";
 import { OfferProps } from "./Interfaces/OfferProps";
 import { Link } from "react-router-dom";
 import OfferImage from "../../assets/image-1.jpg";
+import { ThemeContext } from "../ThemeContext";
 
 class Offer extends React.Component<OfferProps, any> {
-  state = {
-    isFavorite: false
-  }
-
-  addToFavorite = (event: MouseEvent, details: any) => {
-    event.preventDefault();
-    const id = String(this.props.id);
-    if (!localStorage.getItem(id)) {
-      localStorage.setItem(id, JSON.stringify(details));
-      this.setState({ isFavorite: true });
-    } else {
-      localStorage.removeItem(id);
-      this.setState({ isFavorite: false });
-    }
-  }
-
-  componentDidMount() {
-    const id = String(this.props.id);
-    if (localStorage.getItem(id)) {
-      this.setState({ isFavorite: true });
-    }
-  }
-
   render() {
+    let value = this.context;
     let details = {
       id: this.props.id,
       title: this.props.title,
@@ -40,26 +19,30 @@ class Offer extends React.Component<OfferProps, any> {
     };
 
     return (
-      <Link to={`/oferta/${this.props.id}`} className="column is-6-tablet is-4-desktop">
-        <div className={`offer__favorite ${this.state.isFavorite ? `offer__favorite--active` : ``}`} onClick={(event) => this.addToFavorite(event, details)}>
-          <span className="icon-heart"></span>
-        </div>
-        <div className="offer">
-          <div className="offer__media">
-            <img src={this.props.image ? this.props.image : OfferImage} alt="" />
-            <div className="offer__price">{this.props.price}</div>
-          </div>
-          <div className="offer__content">
-            <div className="offer__meta">
-              <div className="offer__category">{this.props.category}</div>
-              <div className="offer__date">{this.props.date}</div>
+      <ThemeContext.Consumer>
+        {value => (
+          <Link to={`/oferta/${this.props.id}`} className="column is-6-tablet is-4-desktop">
+            <div className={`offer__favorite ${value.isFavorite(this.props.id) ? `offer__favorite--active` : ``}`} onClick={((event) => value.toggleFavorites && value.toggleFavorites(event, details))}>
+              <span className="icon-heart"></span>
             </div>
-            <div className="offer__title">{this.props.title}</div>
-            <div className="offer__sep" />
-            <div className="offer__tags">{this.props.tags.map((tag: string) => `${tag}, `)}</div>
-          </div>
-        </div>
-      </Link>
+            <div className="offer">
+              <div className="offer__media">
+                <img src={this.props.image ? this.props.image : OfferImage} alt="" />
+                <div className="offer__price">{this.props.price}</div>
+              </div>
+              <div className="offer__content">
+                <div className="offer__meta">
+                  <div className="offer__category">{this.props.category}</div>
+                  <div className="offer__date">{this.props.date}</div>
+                </div>
+                <div className="offer__title">{this.props.title}</div>
+                <div className="offer__sep" />
+                <div className="offer__tags">{this.props.tags.map((tag: string) => `${tag}, `)}</div>
+              </div>
+            </div>
+          </Link>
+        )}
+      </ThemeContext.Consumer>
     );
   }
 }

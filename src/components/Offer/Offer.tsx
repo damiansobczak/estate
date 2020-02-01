@@ -17,7 +17,6 @@ class Offer extends React.Component<OfferProps, any> {
       date: this.props.date,
       tags: this.props.tags
     };
-
     return (
       <ThemeContext.Consumer>
         {value => (

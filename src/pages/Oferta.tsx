@@ -34,6 +34,7 @@ class Oferta extends React.Component<any, any> {
         window.scrollTo(0, 0);
         const estate = await axios.get(`${process.env.REACT_APP_API_URL}/nieruchomosci/${this.props.match.params.id}`).then(res => res.data);
         this.setState({
+            id: estate.id,
             title: estate.title.rendered,
             text: estate.content.rendered,
             cords: {
@@ -46,22 +47,15 @@ class Oferta extends React.Component<any, any> {
             media: estate.acf.media,
             deposit: estate.acf.kaucja,
             price: estate.acf.cena,
+            category: estate.categories[0] === 2 ? "Wynajem" : "Sprzedaż",
+            tags: [`Liczba pokoi ${estate.acf.liczba_pokoi}`, `${estate.acf.metraz}`, `Liczba pięter ${estate.acf.liczba_pieter}`],
             assets: estate.acf.atrybuty,
+            image: estate.better_featured_image.source_url,
             background: estate.acf.tlo && estate.acf.tlo.url
         });
     }
 
     render() {
-        const offerJumbo = {
-            id: this.props.match.params.id,
-            title: this.state.title,
-            subtitle: this.state.subtitle,
-            text: this.state.text,
-            center: this.state.cords,
-            alt: this.state.alt,
-            address: this.state.address
-        }
-
         return (
             <>
                 <Header height="500px">
@@ -72,7 +66,7 @@ class Oferta extends React.Component<any, any> {
                         alt="To jest alt do slider 1"
                     />
                 </Header>
-                <OfferJumbo details={offerJumbo} />
+                <OfferJumbo details={this.state} />
                 <Assets assets={this.state.assets} />
                 <Fees media={this.state.media} rent={this.state.rent} deposit={this.state.deposit} price={this.state.price} />
                 <Footer />

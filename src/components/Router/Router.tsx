@@ -21,9 +21,6 @@ class Router extends React.Component<any, any> {
     }
     const items = values.map(item => JSON.parse(String(item)));
     this.setState({ favorites: items });
-    setTimeout(() => {
-      console.log(this.state.favorites);
-    }, 1000);
   }
 
   render() {

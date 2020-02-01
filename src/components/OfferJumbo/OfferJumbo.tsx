@@ -12,15 +12,12 @@ class OfferJumbo extends React.Component<OfferJumboProps> {
           <div className="columns">
             <div className="column is-6-tablet">
               <Description
-                id={this.props.details.id}
-                subtitle={this.props.details.subtitle}
-                title={this.props.details.title}
-                text={this.props.details.text}
+                details={this.props.details}
               />
             </div>
             <div className="column is-6-tablet">
               <Map
-                cords={this.props.details.center}
+                cords={this.props.details.cords}
                 address={this.props.details.address}
               />
             </div>

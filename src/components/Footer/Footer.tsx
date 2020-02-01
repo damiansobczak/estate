@@ -1,8 +1,19 @@
-import React, { Component } from "react";
+import React, { Component, MouseEvent } from "react";
 import { Link } from "react-router-dom";
 import "./Footer.scss";
 
 class Footer extends Component<any, any> {
+  state = {
+    button: "Kontakt z nami"
+  }
+
+  showNumber = (e: MouseEvent) => {
+    e.preventDefault();
+    this.setState({
+      button: this.state.button === "Kontakt z nami" ? "+48 793 469 554" : "Kontakt z nami"
+    });
+  }
+
   render() {
     return (
       <footer className="footer">
@@ -13,7 +24,7 @@ class Footer extends Component<any, any> {
               <p className="footer__text">Mieszkania na sprzedaż i wynajem w Kaliszu.</p>
             </div>
             <div className="footer__action column is-4-tablet">
-              <button className="footer__button">Kontakt z nami</button>
+              <button className="footer__button" onClick={(e) => this.showNumber(e)}>{this.state.button}</button>
             </div>
           </section>
           <section className="footer__menu columns">

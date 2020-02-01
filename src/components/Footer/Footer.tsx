@@ -38,9 +38,6 @@ class Footer extends Component<any, any> {
               <li className="footer__link">
                 <Link to="/wynajem">Wynajem</Link>
               </li>
-              <li className="footer__link">
-                <Link to="/kontakt">Kontakt</Link>
-              </li>
             </ul>
             <div className="footer__socials column is-2-tablet">
               <span className="footer__social">

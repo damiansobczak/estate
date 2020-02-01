@@ -4,6 +4,7 @@
 .featureOffer {
   padding: 90px 0;
   position: relative;
+  z-index: 0;
 
   &:before {
     content: attr(data-placeholder);

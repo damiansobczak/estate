@@ -2,6 +2,7 @@ import React, { MouseEvent } from "react";
 import "./Menu.scss";
 import { MenuProps } from "./Interfaces/MenuProps";
 import { ThemeContext } from "../ThemeContext";
+import { Link } from "react-router-dom";
 
 class Menu extends React.Component<MenuProps> {
   private listRef: React.RefObject<HTMLUListElement>;
@@ -33,7 +34,7 @@ class Menu extends React.Component<MenuProps> {
       <ThemeContext.Consumer>
         {value => (
           <nav aria-label="Primary" className="menu container">
-            <img src={this.props.logo} alt="Main logo" className="menu__logo" />
+            <Link to="/"><img src={this.props.logo} alt="Main logo" className="menu__logo" /></Link>
             <button className="menu__mobile" onClick={this.toggleMenu}>
               <span className="icon-menu"></span>
             </button>

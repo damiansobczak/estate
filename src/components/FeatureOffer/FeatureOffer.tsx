@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 
 class FeatureOffer extends React.Component<FeatureOfferProps> {
   render() {
-    console.log(this.props.show);
     return (
       <section className="featureOffer" data-placeholder={this.props.placeholder}>
         <div className="container">

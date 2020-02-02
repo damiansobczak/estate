@@ -1,4 +1,4 @@
-import React, { FormEvent } from "react";
+import React, { FormEvent, MouseEvent } from "react";
 import "./FilterSearch.scss";
 import { getSearches } from "../../API";
 import FilterResult from "../FilterResult/FilterResult";
@@ -8,6 +8,7 @@ class FilterSearch extends React.Component {
   text = React.createRef<HTMLInputElement>();
   price = React.createRef<HTMLInputElement>();
   category = React.createRef<HTMLInputElement>();
+  node = React.createRef<any>();
 
   search = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -21,14 +22,30 @@ class FilterSearch extends React.Component {
     });
   }
 
+  clickOutside = (ev: any) => {
+    if (this.state.isShowing && !this.node.current.contains(ev.target)) {
+      this.setState({
+        isShowing: false
+      });
+    }
+  }
+
   state = {
     isShowing: false,
     result: null
   }
 
+  componentWillMount() {
+    document.addEventListener('mousedown', this.clickOutside, false);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('mousedown', this.clickOutside, false);
+  }
+
   render() {
     return (
-      <div className="filterSearch container">
+      <div className="filterSearch container" ref={this.node}>
         <form className="filterSearch__form" ref={this.form} onSubmit={this.search}>
           <div className="filterSearch__wrapper">
             <div className="filterSearch__group">

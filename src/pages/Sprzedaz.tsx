@@ -37,7 +37,7 @@ class Sprzedaz extends React.Component<any, any> {
           placeholder="Sprzedaż"
           count="10"
           category="Sprzedaż"
-          show={3}
+          show={10}
           data={this.state.sale}
         />
         <Footer />

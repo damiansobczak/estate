@@ -12,13 +12,13 @@ class Jumbo extends React.Component {
             <div className="jumbo__content column is-5-tablet is-4-desktop">
               <div className="jumbo__subtitle">Bogata oferta nieruchomości</div>
               <h2 className="jumbo__title">Specjalizujemy się w sprzedaży</h2>
-              <div className="jumbo__text">A diam id consequat. Sed dictum arcu vel mi malesuada, ac imperdiet felis elementum.</div>
+              <div className="jumbo__text">Biuro nieruchomości luxryestate to nowoczesne biuro agregujące najlepsze oferty w mieście!</div>
             </div>
             <div className="column jumbo__image is-6-tablet is-offset-1-tablet is-offset-2-desktop">
               <img src={HouseImage} alt="" />
               <div className="jumbo__btn">
                 <span className="jumbo__line" />
-                Zobacz resztę ofert
+                Biuro nieruchości
               </div>
             </div>
           </div>

@@ -8,7 +8,7 @@ class Features extends React.Component<any, any> {
       <section className="features">
         <div className="container">
           <div className="features__desc columns">
-            <h3 className="features__title column is-8-tablet">Cały czas zastanawiasz się dlaczego powinieneś wybrać nasze usługi?</h3>
+            <h4 className="features__title column is-6-tablet">Cały czas zastanawiasz się dlaczego powinieneś wybrać nasze usługi?</h4>
             <p className="features__text column is-8-tablet">Poznaj kilka faktów o naszej firmie. Mamy nadzieję że rozjaśni to Twoje wątpliwości. Pamiętaj że nasi konsultanci pozostają do Twojej dyspozycji!</p>
           </div>
           <div className="features__items columns">

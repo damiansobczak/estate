@@ -10,6 +10,8 @@ import Assets from "../components/Assets/Assets";
 import OfferJumbo from "../components/OfferJumbo/OfferJumbo";
 import Fees from "../components/Fees/Fees";
 import axios from "axios";
+import Features from "../components/Features/Features";
+import Gallery from "../components/Gallery/Gallery";
 
 class Oferta extends React.Component<any, any> {
     state = {
@@ -27,7 +29,8 @@ class Oferta extends React.Component<any, any> {
         deposit: "2000",
         price: "345,000",
         assets: {},
-        background: null
+        background: null,
+        gallery: {}
     }
 
     async componentDidMount() {
@@ -51,7 +54,8 @@ class Oferta extends React.Component<any, any> {
             tags: [`Liczba pokoi ${estate.acf.liczba_pokoi}`, `${estate.acf.metraz}`, `Liczba pięter ${estate.acf.liczba_pieter}`],
             assets: estate.acf.atrybuty,
             image: estate.better_featured_image.source_url,
-            background: estate.acf.tlo && estate.acf.tlo.url
+            background: estate.acf.tlo && estate.acf.tlo.url,
+            gallery: estate.acf.galeria
         });
     }
 
@@ -69,6 +73,12 @@ class Oferta extends React.Component<any, any> {
                 <OfferJumbo details={this.state} />
                 <Assets assets={this.state.assets} />
                 <Fees media={this.state.media} rent={this.state.rent} deposit={this.state.deposit} price={this.state.price} />
+                {this.state.gallery && (
+                    <>
+                        <Gallery images={this.state.gallery} />
+                        <Features />
+                    </>
+                )}
                 <Footer />
             </>
         );

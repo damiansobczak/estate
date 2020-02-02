@@ -55,7 +55,7 @@ class Oferta extends React.Component<any, any> {
             assets: estate.acf.atrybuty,
             image: estate.better_featured_image.source_url,
             background: estate.acf.tlo && estate.acf.tlo.url,
-            gallery: estate.acf.galeria
+            gallery: estate.acf.galeria && estate.acf.galeria.obraz_galerii_1 ? estate.acf.galeria : null
         });
     }
 

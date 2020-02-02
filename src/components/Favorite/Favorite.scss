@@ -19,6 +19,19 @@
         display: block;
     }
 
+    &__empty {
+        background-color: $color-neutral-100;
+        padding: 20px 30px;
+        border-radius: 8px;
+        text-align: center;
+        margin-top: 50px;
+
+        .icon-x-circle {
+            font-size: 2rem;
+            color: rgba($color-neutral-300, 0.4);
+        }
+    }
+
     &__header {
         display: flex;
         align-items: center;

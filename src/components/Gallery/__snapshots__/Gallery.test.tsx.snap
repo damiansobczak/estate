@@ -8,32 +8,36 @@ exports[`<Gallery /> renders correctly 1`] = `
     className="gallery__item"
   >
     <img
-      alt="To jest obrazek galeri"
-      src="galeria-1.png"
+      data-photo={0}
+      onClick={[Function]}
+      src="image-1.jpg"
     />
   </div>
   <div
     className="gallery__item"
   >
     <img
-      alt="To jest obrazek galeri"
-      src="galeria-2.png"
+      data-photo={1}
+      onClick={[Function]}
+      src="image-2.jpg"
     />
   </div>
   <div
     className="gallery__item"
   >
     <img
-      alt="To jest obrazek galeri"
-      src="galeria-3.png"
+      data-photo={2}
+      onClick={[Function]}
+      src="image-3.jpg"
     />
   </div>
   <div
     className="gallery__item"
   >
     <img
-      alt="To jest obrazek galeri"
-      src="galeria-4.png"
+      data-photo={3}
+      onClick={[Function]}
+      src="image-4.jpg"
     />
   </div>
 </section>

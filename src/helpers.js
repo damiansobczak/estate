@@ -4,10 +4,7 @@ import Gallery3 from "./assets/image-3.jpg";
 import Gallery4 from "./assets/image-4.jpg";
 
 export const galleryAPI = [
-  { id: 1, src: Gallery1, alt: "To jest obrazek galeri" },
-  { id: 2, src: Gallery2, alt: "To jest obrazek galeri" },
-  { id: 3, src: Gallery3, alt: "To jest obrazek galeri" },
-  { id: 4, src: Gallery4, alt: "To jest obrazek galeri" }
+  Gallery1, Gallery2, Gallery3, Gallery4
 ];
 
 export const assetsAPI = [

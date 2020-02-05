@@ -14,6 +14,6 @@ describe("<Gallery />", () => {
     const wrapper = shallow(<Gallery images={galleryAPI} />);
     const images = wrapper.find(".gallery__item img");
     const imagesArr = images.map(el => el.props().src);
-    expect(imagesArr.includes("galeria-1.png")).toBeTruthy();
+    expect(imagesArr.includes("image-1.jpg")).toBeTruthy();
   });
 });

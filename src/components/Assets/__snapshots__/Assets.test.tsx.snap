@@ -16,7 +16,7 @@ exports[`<Assets /> renders correctly 1`] = `
         <div
           className="assets__name"
         >
-          Łazienka
+          Lazienka
         </div>
         <div
           className="assets__desc"
@@ -58,7 +58,7 @@ exports[`<Assets /> renders correctly 1`] = `
         <div
           className="assets__name"
         >
-          Taras
+          Balkon
         </div>
         <div
           className="assets__desc"
@@ -86,7 +86,7 @@ exports[`<Assets /> renders correctly 1`] = `
         <div
           className="assets__name"
         >
-          Metraż
+          Metraz
         </div>
         <div
           className="assets__desc"

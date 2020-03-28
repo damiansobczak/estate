@@ -31,7 +31,7 @@ describe("<Assets />", () => {
     const wrapper = shallow(<Assets assets={assets} />);
     const arr = wrapper.find(".assets__item");
     const arr2 = arr.forEach(el => el.text());
-    expect(arr2.contains("Lazienka")).toBeTruthy();
+    expect(arr2.contains("Balkon")).toBeTruthy();
   });
 
   it("renders - when object property not provided with space", () => {

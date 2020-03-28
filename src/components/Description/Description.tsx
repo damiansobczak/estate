@@ -22,10 +22,10 @@ class Description extends React.Component<DescriptionProps> {
           <div className="description">
             <div className="description__subtitle">Sprawdź szczegóły tej oferty</div>
             <h2 className="description__title">{this.props.details.title}</h2>
-            <button className={`description__favorite ${value.isFavorite(this.props.details.id) ? `description__favorite--active` : ``}`} onClick={(event: MouseEvent) => value.toggleFavorites && value.toggleFavorites(event, details)}>
+            <button className={`description__favorite ${value.isFavorite(Number(this.props.details.id)) ? `description__favorite--active` : ``}`} onClick={(event: MouseEvent) => value.toggleFavorites && value.toggleFavorites(event, details)}>
               <span className="icon-heart"></span> Dodaj do ulubionych
           </button>
-            <div className="description__text">{this.props.details.text.replace(/<br\>|<p>|<\/p>|/g, '')}</div>
+            <div className="description__text">{this.props.details.text && this.props.details.text.replace(/<br\>|<p>|<\/p>|/g, '')}</div>
           </div>
         )}
       </ThemeContext.Consumer>

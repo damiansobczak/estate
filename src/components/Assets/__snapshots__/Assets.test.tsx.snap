@@ -2,7 +2,7 @@
 
 exports[`<Assets /> renders correctly 1`] = `
 <section
-  className="assets"
+  className="assets false"
 >
   <div
     className="container"

@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Offer /> renders component correctly 1`] = `
+<a
+  className="column is-6-tablet is-4-desktop"
+  href="/oferta/1"
+  onClick={[Function]}
+>
+  <div
+    className="offer__favorite "
+    onClick={[Function]}
+  >
+    <span
+      className="icon-heart"
+    />
+  </div>
+  <div
+    className="offer"
+  >
+    <div
+      className="offer__media"
+    >
+      <img
+        alt=""
+        src="image-1.jpg"
+      />
+      <div
+        className="offer__price"
+      >
+        145,000zł
+      </div>
+    </div>
+    <div
+      className="offer__content"
+    >
+      <div
+        className="offer__meta"
+      >
+        <div
+          className="offer__category"
+        >
+          Wynajem
+        </div>
+        <div
+          className="offer__date"
+        >
+          01 Czer, 2020
+        </div>
+      </div>
+      <div
+        className="offer__title"
+      >
+        Ostrów Wielkopolski
+      </div>
+      <div
+        className="offer__sep"
+      />
+      <div
+        className="offer__tags"
+      >
+        2 pokoje, 
+        Łazienka, 
+        Parking, 
+      </div>
+    </div>
+  </div>
+</a>
+`;

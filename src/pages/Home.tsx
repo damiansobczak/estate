@@ -57,7 +57,7 @@ class Home extends Component<any, any> {
           show={3}
           data={this.state.rent}
         />
-        <Faq data={this.state.faqs}/>
+        <Faq data={this.state.faqs} />
         <Footer />
       </>
     );

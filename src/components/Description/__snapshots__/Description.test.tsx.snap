@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Description /> renders component correctly 1`] = `
+<div
+  className="description"
+>
+  <div
+    className="description__subtitle"
+  >
+    Sprawdź szczegóły tej oferty
+  </div>
+  <h2
+    className="description__title"
+  >
+    Osiedle Złote Łąki
+  </h2>
+  <button
+    className="description__favorite "
+    onClick={[Function]}
+  >
+    <span
+      className="icon-heart"
+    />
+     Dodaj do ulubionych
+  </button>
+  <div
+    className="description__text"
+  >
+    Przedstawiamy najnowszą ofertę biura nieruchomości.
+  </div>
+</div>
+`;

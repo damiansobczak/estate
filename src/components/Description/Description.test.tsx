@@ -34,5 +34,11 @@ const details = {
 describe("<Description />", () => {
     it("renders component correctly", () => {
         const tree = renderer.create(<Description details={details} />).toJSON();
+        expect(tree).toMatchSnapshot();
+    });
+
+    it("displays favorite button", () => {
+        const wrapper = shallow(<Description details={details} />);
+        expect(wrapper.html().search('Dodaj do ulubionych')).toBeTruthy();
     });
 });

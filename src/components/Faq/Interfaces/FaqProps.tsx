@@ -1,3 +1,11 @@
 export interface FaqProps {
-    data: null | object[];
+    data: Array<{
+        id: Number,
+        title: {
+            rendered: String
+        },
+        content: {
+            rendered: String
+        }
+    }>;
 }

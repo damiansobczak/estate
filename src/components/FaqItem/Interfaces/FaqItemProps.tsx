@@ -1,5 +1,5 @@
 export interface FaqItemProps {
-  count: string;
-  title: string;
-  desc: string;
+  count: String;
+  title: String;
+  desc: String;
 }

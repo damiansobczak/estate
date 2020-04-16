@@ -43,7 +43,6 @@ class Home extends Component<any, any> {
         <FeatureOffer
           title="Oferty sprzedaży nieruchomości"
           placeholder="Sprzedaż"
-          count="10"
           category="Sprzedaż"
           show={3}
           data={this.state.sale}
@@ -52,7 +51,6 @@ class Home extends Component<any, any> {
         <FeatureOffer
           title="Oferty najmu nieruchomości"
           placeholder="Wynajem"
-          count="06"
           category="Wynajem"
           show={3}
           data={this.state.rent}

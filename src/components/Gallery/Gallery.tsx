@@ -22,7 +22,7 @@ class Gallery extends React.Component<GalleryProps> {
       <section className="gallery">
         {this.props.images && Object.values(this.props.images).map((image, index) => (
           <div className="gallery__item" key={index}>
-            <img src={String(image)} data-photo={index} onClick={(e) => this.openGallery(e)} />
+            <img src={String(image)} alt={`Estate img ${index}`} data-photo={index} onClick={(e) => this.openGallery(e)} />
           </div>
         ))}
 

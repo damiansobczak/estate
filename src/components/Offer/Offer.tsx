@@ -1,4 +1,4 @@
-import React, { MouseEvent } from "react";
+import React from "react";
 import "./Offer.scss";
 import { OfferProps } from "./Interfaces/OfferProps";
 import { Link } from "react-router-dom";
@@ -7,7 +7,6 @@ import { ThemeContext } from "../ThemeContext";
 
 class Offer extends React.Component<OfferProps, any> {
   render() {
-    let value = this.context;
     let details = {
       id: this.props.id,
       title: this.props.title,

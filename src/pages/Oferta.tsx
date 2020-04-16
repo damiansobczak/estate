@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Header from "../components/Header/Header";
 import { menuAPI } from "../helpers";
 import Menu from "../components/Menu/Menu";

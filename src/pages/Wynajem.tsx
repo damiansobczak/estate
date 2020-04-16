@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Header from "../components/Header/Header";
 import { menuAPI } from "../helpers";
 import Menu from "../components/Menu/Menu";
@@ -18,7 +18,7 @@ class Sprzedaz extends React.Component<any, any> {
   }
 
   componentDidMount() {
-    const rent = getPromoRent().then(res => this.setState({ rent: res }));
+    getPromoRent().then(res => this.setState({ rent: res }));
   }
 
   render() {
@@ -35,7 +35,6 @@ class Sprzedaz extends React.Component<any, any> {
         <FeatureOffer
           title="Oferty wynajmu nieruchomości"
           placeholder="Wynajem"
-          count="10"
           category="Wynajem"
           show={10}
           data={this.state.rent}

@@ -1,4 +1,4 @@
-import React, { FormEvent, MouseEvent } from "react";
+import React, { FormEvent } from "react";
 import "./FilterSearch.scss";
 import { getSearches } from "../../API";
 import FilterResult from "../FilterResult/FilterResult";
@@ -13,7 +13,7 @@ class FilterSearch extends React.Component {
   search = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const text = this.text.current ? this.text.current.value : "";
-    const price = this.price.current && Number(this.price.current.value) != 0 ? Number(this.price.current.value.replace(/zł|,| /g, '')) : 999999999;
+    const price = this.price.current && Number(this.price.current.value) !== 0 ? Number(this.price.current.value.replace(/zł|,| /g, '')) : 999999999;
     const category = this.category.current ? this.category.current.value : "";
     const data = await getSearches(text, price, category);
     this.setState({

@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 import renderer from "react-test-renderer";
 import FaqItem from "./FaqItem";
 
-describe("<FaqItem.test />", () => {
+describe("<FaqItem />", () => {
     it("renders component correctly", () => {
         const tree = renderer.create(<FaqItem count="01" title="To jest faq 1" desc="To jest desc dla Faq 01" />).toJSON();
         expect(tree).toMatchSnapshot();

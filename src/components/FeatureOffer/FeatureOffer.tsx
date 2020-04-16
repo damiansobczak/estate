@@ -2,7 +2,6 @@ import React from "react";
 import { FeatureOfferProps } from "./Interfaces/FeatureOfferProps";
 import "./FeatureOffer.scss";
 import Offer from "../Offer/Offer";
-import Image from "../../assets/feature-offer.png";
 import { Link } from "react-router-dom";
 
 class FeatureOffer extends React.Component<FeatureOfferProps> {

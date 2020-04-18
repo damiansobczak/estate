@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FeatureOffer /> renders component correctly 1`] = `
+<section
+  className="featureOffer"
+  data-placeholder="Sprzedaż"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="featureOffer__counter"
+    >
+      <div
+        className="featureOffer__counter__digit"
+      >
+        1
+      </div>
+      <div
+        className="featureOffer__counter__text"
+      >
+        Aktualnie w ofercie
+      </div>
+    </div>
+    <div
+      className="columns"
+    >
+      <div
+        className="column is-6-tablet"
+      >
+        <a
+          className="featureOffer__link"
+          href="/sprzedaz"
+          onClick={[Function]}
+        >
+          Zobacz więcej ofert
+        </a>
+        <h2
+          className="featureOffer__title"
+        >
+          Oferty sprzedaży nieruchomości
+        </h2>
+      </div>
+      <div
+        className="column is-6-tablet"
+      >
+        <div
+          className="featureOffer__contact"
+        >
+          Potrzebujesz pomocy agenta? 
+          <span
+            className="featureOffer__phone"
+          >
+            +48 793 469 554
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="columns is-multiline"
+    >
+      <a
+        className="column is-6-tablet is-4-desktop"
+        href="/oferta/45"
+        onClick={[Function]}
+      >
+        <div
+          className="offer__favorite "
+          onClick={[Function]}
+        >
+          <span
+            className="icon-heart"
+          />
+        </div>
+        <div
+          className="offer"
+        >
+          <div
+            className="offer__media"
+          >
+            <img
+              alt=""
+              src="http://localhost:8888/estate/wp-content/uploads/2020/01/image-5.jpg"
+            />
+            <div
+              className="offer__price"
+            >
+              345,700zł
+            </div>
+          </div>
+          <div
+            className="offer__content"
+          >
+            <div
+              className="offer__meta"
+            >
+              <div
+                className="offer__category"
+              >
+                Sprzedaż
+              </div>
+              <div
+                className="offer__date"
+              >
+                24 Czer, 2019
+              </div>
+            </div>
+            <div
+              className="offer__title"
+            >
+              Osiedle Biały Las, ul. Leśna 2
+            </div>
+            <div
+              className="offer__sep"
+            />
+            <div
+              className="offer__tags"
+            >
+              Liczba pokoi 5, 
+              120m2, 
+              Liczba pięter 2, 
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+`;

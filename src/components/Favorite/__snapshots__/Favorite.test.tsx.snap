@@ -1,0 +1,160 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Favorite /> renders component correctly when empty 1`] = `
+<div
+  className="favorite "
+>
+  <div
+    className="container"
+  >
+    <button
+      className="favorite__close"
+      onClick={[Function]}
+    >
+      <span
+        className="icon-x"
+      />
+    </button>
+    <div
+      className="favorite__header"
+    >
+      <h4
+        className="favorite__title"
+      >
+        Ulubione
+      </h4>
+      <button
+        className="favorite__button"
+        onClick={[Function]}
+      >
+        <span
+          className="icon-trash-2"
+        />
+        Usuń zapisane
+      </button>
+    </div>
+    <div
+      className="favorite__empty columns"
+    >
+      <div
+        className="column"
+      >
+        <span
+          className="icon-x-circle"
+        />
+        <h2>
+          Upss.
+        </h2>
+        <p>
+          Aktualnie nie masz żadnych zapisanych ofert.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Favorite /> renders component correctly when selected 1`] = `
+<div
+  className="favorite "
+>
+  <div
+    className="container"
+  >
+    <button
+      className="favorite__close"
+      onClick={[Function]}
+    >
+      <span
+        className="icon-x"
+      />
+    </button>
+    <div
+      className="favorite__header"
+    >
+      <h4
+        className="favorite__title"
+      >
+        Ulubione
+      </h4>
+      <button
+        className="favorite__button"
+        onClick={[Function]}
+      >
+        <span
+          className="icon-trash-2"
+        />
+        Usuń zapisane
+      </button>
+    </div>
+    <div
+      className="favorite__items columns"
+    >
+      <a
+        className="column is-6-tablet is-4-desktop"
+        href="/oferta/42"
+        onClick={[Function]}
+      >
+        <div
+          className="offer__favorite "
+          onClick={[Function]}
+        >
+          <span
+            className="icon-heart"
+          />
+        </div>
+        <div
+          className="offer"
+        >
+          <div
+            className="offer__media"
+          >
+            <img
+              alt=""
+              src="http://localhost:8888/estate/wp-content/uploads/2020/01/image-1.jpg"
+            />
+            <div
+              className="offer__price"
+            >
+              125,500zł
+            </div>
+          </div>
+          <div
+            className="offer__content"
+          >
+            <div
+              className="offer__meta"
+            >
+              <div
+                className="offer__category"
+              >
+                Sprzedaż
+              </div>
+              <div
+                className="offer__date"
+              >
+                24 Czer, 2019
+              </div>
+            </div>
+            <div
+              className="offer__title"
+            >
+              Osiedle Babina, ul. Babina 20/3A
+            </div>
+            <div
+              className="offer__sep"
+            />
+            <div
+              className="offer__tags"
+            >
+              Liczba pokoi 3, 
+              76m2, 
+              Liczba pięter 1, 
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+`;

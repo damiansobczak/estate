@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FeaturesItem /> renders component correctly 1`] = `
+<div
+  className="featuresItem column"
+>
+  <div
+    className="featuresItem__icon"
+    data-number="1"
+  >
+    <span
+      className="icon-key"
+    />
+  </div>
+  <div
+    className="featuresItem__title"
+  >
+    Najniższe ceny w mieście
+  </div>
+</div>
+`;

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FilterResult /> renders component correctly 1`] = `
+<div
+  className="filterResult  "
+>
+  <div
+    className="filterResult__title"
+  >
+    Brak ofert
+  </div>
+</div>
+`;

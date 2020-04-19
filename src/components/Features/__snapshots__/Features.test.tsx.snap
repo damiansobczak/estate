@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Features /> renders component correctly 1`] = `
+<section
+  className="features"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="features__desc columns"
+    >
+      <h4
+        className="features__title column is-6-tablet"
+      >
+        Cały czas zastanawiasz się dlaczego powinieneś wybrać nasze usługi?
+      </h4>
+      <p
+        className="features__text column is-8-tablet"
+      >
+        Poznaj kilka faktów o naszej firmie. Mamy nadzieję że rozjaśni to Twoje wątpliwości. Pamiętaj że nasi konsultanci pozostają do Twojej dyspozycji!
+      </p>
+    </div>
+    <div
+      className="features__items columns"
+    >
+      <div
+        className="featuresItem column"
+      >
+        <div
+          className="featuresItem__icon"
+          data-number="1"
+        >
+          <span
+            className="icon-key"
+          />
+        </div>
+        <div
+          className="featuresItem__title"
+        >
+          Najniższe ceny w mieście
+        </div>
+      </div>
+      <div
+        className="featuresItem column"
+      >
+        <div
+          className="featuresItem__icon"
+          data-number="2"
+        >
+          <span
+            className="icon-check-square"
+          />
+        </div>
+        <div
+          className="featuresItem__title"
+        >
+          Wszystko załatwimy za Ciebie
+        </div>
+      </div>
+      <div
+        className="featuresItem column"
+      >
+        <div
+          className="featuresItem__icon"
+          data-number="3"
+        >
+          <span
+            className="icon-gift"
+          />
+        </div>
+        <div
+          className="featuresItem__title"
+        >
+          Dajemy roczną gwarancję
+        </div>
+      </div>
+      <div
+        className="featuresItem column"
+      >
+        <div
+          className="featuresItem__icon"
+          data-number="4"
+        >
+          <span
+            className="icon-volume-2"
+          />
+        </div>
+        <div
+          className="featuresItem__title"
+        >
+          Stawiamy na komunikację
+        </div>
+      </div>
+      <div
+        className="featuresItem column"
+      >
+        <div
+          className="featuresItem__icon"
+          data-number="5"
+        >
+          <span
+            className="icon-unlock"
+          />
+        </div>
+        <div
+          className="featuresItem__title"
+        >
+          Bezpieczeństwo transakcji
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;

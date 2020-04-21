@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FilterSearch /> renders component correctly 1`] = `
+<div
+  className="filterSearch container"
+>
+  <form
+    className="filterSearch__form"
+    onSubmit={[Function]}
+  >
+    <div
+      className="filterSearch__wrapper"
+    >
+      <div
+        className="filterSearch__group"
+      >
+        <label
+          className="filterSearch__label"
+          htmlFor="filterSearch__name"
+        >
+          Szukaj
+        </label>
+        <input
+          className="filterSearch__input"
+          id="filterSearch__name"
+          onChange={[Function]}
+          placeholder="Napisz nam czego szukasz?"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        className="filterSearch__group filterSearch__group--price"
+      >
+        <label
+          className="filterSearch__label"
+          htmlFor="filterSearch__price"
+        >
+          Cena
+        </label>
+        <input
+          className="filterSearch__input"
+          id="filterSearch__price"
+          onChange={[Function]}
+          placeholder="np. 200,000zł"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        className="filterSearch__group filterSearch__group--category"
+      >
+        <label
+          className="filterSearch__label"
+          htmlFor="filterSearch__category"
+        >
+          Kategoria
+        </label>
+        <input
+          className="filterSearch__input"
+          id="filterSearch__category"
+          onChange={[Function]}
+          placeholder="Kupno lub wynajem"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <button
+      className="filterSearch__btn"
+    >
+      Wyszukaj
+    </button>
+  </form>
+  <div
+    className="filterResult  "
+  >
+    <div
+      className="filterResult__title"
+    >
+      Brak ofert
+    </div>
+  </div>
+</div>
+`;
